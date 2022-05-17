@@ -18,7 +18,9 @@ namespace DisplayActionSheetTester
                 await Application.Current.MainPage.DisplayActionSheet($"Menu ...", "Cancel", null, new string[] { "Action1", "Action2" });
             }, ToolbarItemOrder.Primary));
 
-            Title = "NextPage";
+            ToolbarItems.Add(new ToolbarItem("Prompt", "", async () => {
+                await Application.Current.MainPage.DisplayPromptAsync("Prompt", "Enter a number < 9999", "OK", "Cancel", keyboard: Keyboard.Numeric);
+            }, ToolbarItemOrder.Primary));
 
             Content = new Label { Text = "NextPage" };
         }
