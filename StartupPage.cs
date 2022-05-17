@@ -14,6 +14,7 @@ namespace DisplayActionSheetTester
                 await Navigation.PushModalAsync(new NavigationPage(new NextPage()) { BarTextColor = Colors.Black, BarBackgroundColor = Colors.Aqua });
             }, ToolbarItemOrder.Primary));
 
+
             Title = "StartupPage";
 
             Content = new Label { Text = "StartupPage" };
